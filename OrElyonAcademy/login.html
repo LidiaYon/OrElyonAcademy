@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrElyon Academy - Login</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/login.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="OrElyon Academy Logo" class="logo">
+                <span class="academy-name">OrElyon Academy</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="login-page">
+        <div class="container">
+            <div class="login-container">
+                <h1>Welcome</h1>
+                <form id="login-form" onsubmit="return handleLogin()">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="login-button">Login</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 OrElyon Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

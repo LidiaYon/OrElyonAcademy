@@ -1,0 +1,491 @@
+:root {
+    --primary-color: #357960;
+    --secondary-color: #f0a500;
+    --accent-color: #e74c3c;
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --white-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding-top: 80px; /* Added for fixed header */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.academy-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.hero {
+    background-image: linear-gradient(rgba(53, 121, 96, 0.8), rgba(53, 121, 96, 0.8)), url('https://source.unsplash.com/random/1600x900/?education');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d89400;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.about-content, .mission-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-text, .mission-text {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.about-image, .mission-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img, .mission-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tutors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.tutor-card {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tutor-card:hover {
+    transform: translateY(-5px);
+}
+
+.tutor-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tutor-info {
+    padding: 20px;
+}
+
+.tutor-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.tutor-specialty {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.courses {
+    background-color: var(--white-color);
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.course-item {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.course-item:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.course-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.course-item:hover .course-icon {
+    color: var(--white-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Exam page specific styles */
+.exam-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--white-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* ... (previous CSS remains the same) ... */
+
+/* Updated styles for exam questions and choices */
+.question-container {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.question-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.question-container .choice {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.question-container input[type="radio"],
+.question-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.question-container .choice label {
+    margin-bottom: 0;
+    font-weight: normal;
+    color: var(--text-color);
+}
+
+.question-container input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* ... (rest of the CSS remains the same) ... */
+#timer, #lockdown-counter {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+button[type="submit"] {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-color);
+}
+
+.correct { color: green; }
+.incorrect { color: red; }
+.correct-answer { font-weight: bold; }
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 20px;
+    }
+    
+    .about-content, .mission-content {
+        flex-direction: column;
+    }
+    
+    .about-text, .mission-text {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .exam-container {
+        padding: 10px;
+    }
+
+    .question-container {
+        padding: 10px;
+    }
+
+    .login-container {
+        padding: 30px;
+    }
+
+    .contact-section {
+        padding: 30px;
+    }
+}
+
+.correct { color: green; }
+.incorrect { color: red; }
+.correct-answer { font-weight: bold; }
+.question-container { margin-bottom: 20px; }
+#timer, #lockdown-status {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+#timer { color: #357960; }
+#lockdown-status { color: #f0a500; }
+
+
+
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 160px); /* Adjust based on your header and footer height */
+    background-color: var(--background-color);
+}
+
+.login-container {
+    background-color: var(--white-color);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-container h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.login-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: var(--primary-color);
+}
+
+
+
+.contact-page {
+    padding: 60px 0;
+    background-color: var(--background-color);
+}
+
+.contact-section {
+    background-color: var(--white-color);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+
+/* Unified button styles */
+.submit-button,
+.login-button,
+button[type="submit"] {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.submit-button:hover,
+.login-button:hover,
+button[type="submit"]:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}

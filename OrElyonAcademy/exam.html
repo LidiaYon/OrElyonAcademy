@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrElyon Academy - Exam</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/checkLogin.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+    <style>
+        .correct { color: green; }
+        .incorrect { color: red; }
+        .correct-answer { font-weight: bold; }
+        .question-container { margin-bottom: 20px; }
+    </style>
+</head>
+<!-- <body onload="startExam()"> -->
+<body>
+
+  <header>
+    <div class="container header-content">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="OrElyon Academy Logo" class="logo">
+            <span class="academy-name">OrElyon Academy</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="practice.html">Practice </a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main>
+      <div id="exam-container">
+        <div id="timer">Time Remaining: 60:00</div>
+        <div id="lockdown-status">Lockdown Mode: Active</div>
+        <div id="window-leaves">Window Leaves: 0</div>
+
+        <form id="exam-form">
+            <h2>Exam Questions</h2>
+
+                <div class="question-container">
+                  <label>1. Perform the operation and express the result as a decimal: <br>2.75 × (3/8 + 0.5)</label>
+                  <div class="choice">
+                      <input type="radio" id="q1a" name="q1" value="2.40625">
+                      <label for="q1a">2.40625</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q1b" name="q1" value="3.09375">
+                      <label for="q1b">3.09375</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q1c" name="q1" value="2.75625">
+                      <label for="q1c">2.75625</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q1d" name="q1" value="3.25">
+                      <label for="q1d">3.25</label>
+                  </div>
+              </div>
+              
+              <div class="question-container">
+                  <label>2. Fill in the blank: (2/3 - 0.25) ÷ 0.5 = ____ (Answer with only two digit after decimal)</label>
+                  <input type="text" id="q2" name="q2">
+              </div>
+              
+              <div class="question-container">
+                  <label>3. Which of the following are equivalent to 0.375? (Choose all that apply)</label>
+                  <div class="choice">
+                      <input type="checkbox" id="mc1a" name="mc1" value="3/8">
+                      <label for="mc1a">3/8</label>
+                  </div>
+                  <div class="choice">
+                      <input type="checkbox" id="mc1b" name="mc1" value="6/16">
+                      <label for="mc1b">6/16</label>
+                  </div>
+                  <div class="choice">
+                      <input type="checkbox" id="mc1c" name="mc1" value="15/40">
+                      <label for="mc1c">15/40</label>
+                  </div>
+                  <div class="choice">
+                      <input type="checkbox" id="mc1d" name="mc1" value="37.5%">
+                      <label for="mc1d">37.5%</label>
+                  </div>
+              </div>
+              
+              <div class="question-container">
+                  <label>4. Convert the mixed number to an improper fraction, then subtract: <br>3 1/4 - 1.75</label>
+                  <div class="choice">
+                      <input type="radio" id="q4a" name="q4" value="1.5">
+                      <label for="q4a">1.5</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q4b" name="q4" value="1 1/2">
+                      <label for="q4b">1 1/2</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q4c" name="q4" value="3/4">
+                      <label for="q4c">3/4</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q4d" name="q4" value="2 1/4">
+                      <label for="q4d">2 1/4</label>
+                  </div>
+              </div>
+              
+              <div class="question-container">
+                  <label>5. If x = 0.625 and y = 3/8, what is the value of (x + y) ÷ (x - y)?</label>
+                  <input type="text" id="q5" name="q5">
+              </div>
+              
+              <div class="question-container">
+                  <label>6. Multiply this number 13.78 by 5/6. Express your answer as a decimal.</label>
+                  <div class="choice">
+                      <input type="radio" id="q6a" name="q6" value="11.4875">
+                      <label for="q6a">11.4875</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q6b" name="q6" value="11.4833">
+                      <label for="q6b">11.4833</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q6c" name="q6" value="11.4917">
+                      <label for="q6c">11.4917</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q6d" name="q6" value="11.5000">
+                      <label for="q6d">11.5000</label>
+                  </div>
+              </div>
+              
+              <div class="question-container">
+                  <label>7. Fill in the blank: 2.25 ÷ ____ = 9/10</label>
+                  <input type="text" id="q7" name="q7">
+              </div>
+              
+              <div class="question-container">
+                  <label>8. Which of the following expressions is equivalent to 0.75 × (4/5 - 0.3)?</label>
+                  <div class="choice">
+                      <input type="radio" id="q8a" name="q8" value="3/8">
+                      <label for="q8a">3/8</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q8b" name="q8" value="0.375">
+                      <label for="q8b">0.375</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q8c" name="q8" value="9/20">
+                      <label for="q8c">9/20</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q8d" name="q8" value="0.45">
+                      <label for="q8d">0.45</label>
+                  </div>
+              </div>
+              
+              <div class="question-container">
+                  <label>9. If a = 1.25 and b = 2/3, what is the value of (a + b) ÷ (a - b)?</label>
+                  <input type="text" id="q9" name="q9">
+              </div>
+              
+              <div class="question-container">
+                  <label>10. Convert 5/12 to a decimal, then subtract it from 0.75. Express your answer as a fraction in lowest terms.</label>
+                  <div class="choice">
+                      <input type="radio" id="q10a" name="q10" value="1/3">
+                      <label for="q10a">1/3</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q10b" name="q10" value="3/8">
+                      <label for="q10b">3/8</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q10c" name="q10" value="5/12">
+                      <label for="q10c">5/12</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q10d" name="q10" value="7/12">
+                      <label for="q10d">7/12</label>
+                  </div>
+              </div>
+              
+              <div class="question-container">
+                  <label>11. Given x = 5/8, find y in y = 3.2x - 1.75.</label>
+                  <div class="choice">
+                      <input type="radio" id="q11a" name="q11" value="0.25">
+                      <label for="q11a">0.25</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q11b" name="q11" value="0.5">
+                      <label for="q11b">0.5</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q11c" name="q11" value="0.75">
+                      <label for="q11c">0.75</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q11d" name="q11" value="1">
+                      <label for="q11d">1</label>
+                  </div>
+              </div>
+              
+              <div class="question-container">
+                  <label>12. Given x = -2.25, find y in y = 4.5x + 7.3.</label>
+                  <input type="text" id="q12" name="q12">
+              </div>
+              
+              <div class="question-container">
+                  <label>13. Given x = 3/4, find y in y = (7x - 3) ÷ 2. Express your answer as a decimal rounded to two decimal places.</label>
+                  <div class="choice">
+                      <input type="radio" id="q13a" name="q13" value="1.13">
+                      <label for="q13a">1.13</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q13b" name="q13" value="0.38">
+                      <label for="q13b">0.38</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q13c" name="q13" value="0.63">
+                      <label for="q13c">0.63</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q13d" name="q13" value="0.88">
+                      <label for="q13d">0.88</label>
+                  </div>
+              </div>
+              
+              <div class="question-container">
+                  <label>14. Given x = 11/6, find y in y = 5x - 8.5. Which of the following are equivalent to y? (Choose all that apply)</label>
+                  <div class="choice">
+                      <input type="checkbox" id="q14a" name="q14" value="0.75">
+                      <label for="q14a">0.667</label>
+                  </div>
+                  <div class="choice">
+                      <input type="checkbox" id="q14b" name="q14" value="3/4">
+                      <label for="q14b">3/4</label>
+                  </div>
+                  <div class="choice">
+                      <input type="checkbox" id="q14c" name="q14" value="9/12">
+                      <label for="q14c">9/12</label>
+                  </div>
+                  <div class="choice">
+                      <input type="checkbox" id="q14d" name="q14" value="18/24">
+                      <label for="q14d">18/24</label>
+                  </div>
+              </div>
+              
+              <div class="question-container">
+                  <label>15. Given x = -1.8, find y in y = 3x + 4 + 5.6.</label>
+                  <input type="text" id="q15" name="q15">
+              </div>
+              
+              <div class="question-container">
+                  <label>16. Given x = 2, find y in y = (3x - 7) ÷ (x - 1). Express your answer as a fraction in lowest terms.</label>
+                  <div class="choice">
+                      <input type="radio" id="q16a" name="q16" value="5/3">
+                      <label for="q16a">-1</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q16b" name="q16" value="7/3">
+                      <label for="q16b">1</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q16c" name="q16" value="10/3">
+                      <label for="q16c">10/3</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q16d" name="q16" value="13/3">
+                      <label for="q16d">13/3</label>
+                  </div>
+              </div>
+              
+              <div class="question-container">
+                  <label>17. Given x = 2.4, find y in y = 1.5x - 3.7.</label>
+                  <input type="text" id="q17" name="q17">
+              </div>
+              
+              <div class="question-container">
+                  <label>18. A cinema has 180 seats in each of its 5 screening rooms. If 750 tickets have been sold for a special event, how many seats are still available?</label>
+                  <input type="text" id="q18" name="q18">
+              </div>
+              
+              <div class="question-container">
+                  <label>19. A printing company charges $0.12 per page for printing. If Sarah prints 350 pages, how much will she pay in total?</label>
+                  <div class="choice">
+                      <input type="radio" id="q19a" name="q19" value="$36.00">
+                      <label for="q19a">$36.00</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q19b" name="q19" value="$42.00">
+                      <label for="q19b">$42.00</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q19c" name="q19" value="$48.00">
+                      <label for="q19c">$48.00</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q19d" name="q19" value="$54.00">
+                      <label for="q19d">$54.00</label>
+                  </div>
+              </div>
+              
+              <div class="question-container">
+                  <label>20. A household uses 0.25 kilowatt-hours of electricity per minute. If the total usage for a day is 6 hours, how many kilowatt-hours were used?</label>
+                  <input type="text" id="q20" name="q20">
+              </div>
+              
+              <div class="question-container">
+                  <label>21. For a charity event, each ticket costs $25. A sponsor buys 12 tickets and then decides to buy x additional tickets, spending a total of $420. How many additional tickets did the sponsor buy?</label>
+                  <div class="choice">
+                      <input type="radio" id="q21a" name="q21" value="3">
+                      <label for="q21a">3</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q21b" name="q21" value="4">
+                      <label for="q21b">4</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q21c" name="q21" value="5">
+                      <label for="q21c">5</label>
+                  </div>
+                  <div class="choice">
+                      <input type="radio" id="q21d" name="q21" value="6">
+                      <label for="q21d">6</label>
+                  </div>
+              </div>
+              
+              <div class="question-container">
+                <label>22. Chef Alice is preparing a special dish that requires 2.75 liters of olive oil. If she decides to triple the recipe, how much olive oil will she need? If she only has 7 liters of olive oil in stock and olive oil costs $8.50 per liter, how much will she need to spend to buy the additional olive oil needed?</label>
+                <input type="text" id="q22" name="q22">
+            </div>
+            
+            <div class="question-container">
+                <label>23. A company allocates $1200 for office supplies. They spend $300 on printer paper and $x on ink cartridges. If the remaining budget is $450, how much was spent on ink cartridges?</label>
+                <input type="text" id="q23" name="q23">
+            </div>
+            
+            <div class="question-container">
+                <label>24. Emily and her friends went on a road trip and spent $60 on fuel and $20 on food. They decided to split the total cost equally among x people. If each person ends up paying $20 for the trip, how many people went on the trip?</label>
+                <div class="choice">
+                    <input type="radio" id="q24a" name="q24" value="3">
+                    <label for="q24a">3</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q24b" name="q24" value="4">
+                    <label for="q24b">4</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q24c" name="q24" value="5">
+                    <label for="q24c">5</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q24d" name="q24" value="6">
+                    <label for="q24d">6</label>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <label>25. A school is organizing a fundraising event. They sell 120 tickets at $5 each, 80 tickets at $8 each, and receive a $200 donation. If the school wants to divide the total funds equally among 5 different school clubs, how much will each club receive?</label>
+                <div class="choice">
+                    <input type="radio" id="q25a" name="q25" value="$220">
+                    <label for="q25a">$220</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q25b" name="q25" value="$240">
+                    <label for="q25b">$240</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q25c" name="q25" value="$260">
+                    <label for="q25c">$260</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q25d" name="q25" value="$288">
+                    <label for="q25d">$288</label>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <label>26. Two cars start driving towards each other from towns 360 km apart. The first car travels at x km/h, while the second travels 20 km/h faster than the first. If they meet after 2 hours, what is the speed of the first car?</label>
+                <div class="choice">
+                    <input type="radio" id="q26a" name="q26" value="70 km/h">
+                    <label for="q26a">70 km/h</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q26b" name="q26" value="80 km/h">
+                    <label for="q26b">80 km/h</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q26c" name="q26" value="90 km/h">
+                    <label for="q26c">90 km/h</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q26d" name="q26" value="100 km/h">
+                    <label for="q26d">100 km/h</label>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <label>27. A company's profit is given by the equation P = 100x - 500, where x is the number of units sold. The company wants to achieve a profit of $1500. How many units do they need to sell?</label>
+                <div class="choice">
+                    <input type="radio" id="q27a" name="q27" value="15 units">
+                    <label for="q27a">15 units</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q27b" name="q27" value="20 units">
+                    <label for="q27b">20 units</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q27c" name="q27" value="25 units">
+                    <label for="q27c">25 units</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q27d" name="q27" value="30 units">
+                    <label for="q27d">30 units</label>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <label>28. A car is driving at a constant speed on a straight highway. It travels 120 kilometers in 2 hours. If it continues at the same speed, how far will it travel in 5 hours?</label>
+                <div class="choice">
+                    <input type="radio" id="q28a" name="q28" value="240 kilometers">
+                    <label for="q28a">240 kilometers</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q28b" name="q28" value="280 kilometers">
+                    <label for="q28b">280 kilometers</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q28c" name="q28" value="300 kilometers">
+                    <label for="q28c">300 kilometers</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q28d" name="q28" value="360 kilometers">
+                    <label for="q28d">360 kilometers</label>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <label>29. A small factory produces 20 toys per day. If they start with 50 toys in inventory, how many toys will they have after 5 days of production?</label>
+                <div class="choice">
+                    <input type="radio" id="q29a" name="q29" value="100 toys">
+                    <label for="q29a">100 toys</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q29b" name="q29" value="120 toys">
+                    <label for="q29b">120 toys</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q29c" name="q29" value="140 toys">
+                    <label for="q29c">140 toys</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q29d" name="q29" value="150 toys">
+                    <label for="q29d">150 toys</label>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <label>30. NLE Choppa's new single earns $0.004 per stream on a popular streaming platform. If he earned $2,800 from this platform last month, how many streams did his single receive?</label>
+                <input type="text" id="q30" name="q30">
+            </div>
+            
+            <div class="question-container">
+                <label>31. Polo G's management team notices that for every 1000 social media followers he gains, his average daily streams increase by 500. If he currently has 2 million followers and 100,000 daily streams, how many followers would he need to reach 250,000 daily streams?</label>
+                <div class="choice">
+                    <input type="radio" id="q31a" name="q31" value="2.3 million">
+                    <label for="q31a">2.3 million</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q31b" name="q31" value="2.5 million">
+                    <label for="q31b">2.5 million</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q31c" name="q31" value="2.7 million">
+                    <label for="q31c">2.7 million</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q31d" name="q31" value="3 million">
+                    <label for="q31d">3 million</label>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <label>32. A streaming service offers NLE Choppa two payment options for his new album:
+                Option A: $10,000 upfront plus $0.01 per stream
+                Option B: $0.02 per stream with no upfront payment
+                After how many streams would Option B become more profitable for NLE Choppa?</label>
+                <div class="choice">
+                    <input type="radio" id="q32a" name="q32" value="500,000 streams">
+                    <label for="q32a">500,000 streams</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q32b" name="q32" value="750,000 streams">
+                    <label for="q32b">750,000 streams</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q32c" name="q32" value="1,000,000 streams">
+                    <label for="q32c">1,000,000 streams</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q32d" name="q32" value="1,250,000 streams">
+                    <label for="q32d">1,250,000 streams</label>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <label>33. Kendrick's record label spends $x on marketing, which increases his streams by 5% for every $1000 spent. If his initial daily streams were 80,000 and after the marketing campaign they increased to 120,000, how much did the label spend on marketing?</label>
+                <div class="choice">
+                    <input type="radio" id="q33a" name="q33" value="$6,000">
+                    <label for="q33a">$6,000</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q33b" name="q33" value="$8,000">
+                    <label for="q33b">$8,000</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q33c" name="q33" value="$10,000">
+                    <label for="q33c">$10,000</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q33d" name="q33" value="$12,000">
+                    <label for="q33d">$12,000</label>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <label>34. NLE Choppa's streaming numbers grow linearly over time. In January, he had 10 million total streams, and by April, he had reached 22 million. If this trend continues, in which month will he reach 50 million total streams? (Answer the name of the month - October/November/December)</label>
+                <input type="text" id="q34" name="q34">
+            </div>
+            
+            <div class="question-container">
+                <label>35. A taxi company charges a base fare of $5 plus $2 for every kilometer traveled. The total cost of a ride can be modeled by the linear function C(x) = 2x + 5, where C is the cost in dollars and x is the distance traveled in kilometers. If a passenger's ride costs $37, how many kilometers did they travel?</label>
+                <div class="choice">
+                    <input type="radio" id="q35a" name="q35" value="14 kilometers">
+                    <label for="q35a">14 kilometers</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q35b" name="q35" value="15 kilometers">
+                    <label for="q35b">15 kilometers</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q35c" name="q35" value="16 kilometers">
+                    <label for="q35c">16 kilometers</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="q35d" name="q35" value="17 kilometers">
+                    <label for="q35d">17 kilometers</label>
+                </div>
+            </div>
+
+                <button type="button" class="submit-button" onclick="submitExam()">Submit Exam</button>
+            </form>
+
+            <div id="score-container" style="display:none;">
+                <h2>Your Score</h2>
+                <p id="score"></p>
+                <div id="feedback"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 OrElyon Academy. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
